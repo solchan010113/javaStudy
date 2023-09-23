@@ -1,18 +1,18 @@
-package Step05;
+package Step06;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Step05_11 {
+public class Step06_06 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String a = "";
-        String b = "";
-        while((a = br.readLine()) != null){
-            b+=a+"\n";
+        String str = br.readLine();
+        String[] arr = {"c=","c-","dz=","d-","lj","nj","s=","z="};
+        for(int i = 0; i < arr.length; i++) {
+            str = str.replace(arr[i],"!");
         }
-        System.out.println(b);
+        System.out.println(str.length());
     }
 }

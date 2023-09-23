@@ -1,18 +1,20 @@
-package Step05;
+package Step06;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Step05_11 {
+public class Step06_04 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String a = "";
-        String b = "";
-        while((a = br.readLine()) != null){
-            b+=a+"\n";
+        char[] a = br.readLine().toCharArray();
+        int num = 0;
+        for(int i = 0; i<a.length/2; i ++){
+            if(a[i] == a[a.length-i-1]) {
+                num++;
+            }
         }
-        System.out.println(b);
+        System.out.println(num==a.length/2?1:0);
     }
 }

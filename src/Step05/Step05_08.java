@@ -13,7 +13,7 @@ public class Step05_08 {
         String strTrim = "";
         boolean check = false;
         for(int i=0; i<str.length(); i++) {
-            if(str.charAt(i) != ' ' && check==false){
+            if(str.charAt(i) != ' ' && !check){
                 check = true;
                 num++;
             } else if (str.charAt(i) == ' ') {
